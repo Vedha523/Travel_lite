@@ -33,11 +33,15 @@
         .nav-bar a {
             color: black;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 25px;
             padding: 10px;
             transition: .9s;
+            display: flex;
         }
-
+        .nav-bar img{
+            width: 160px;
+            height: 140px;
+        }
 
         #header {
             background-color: pink;
@@ -46,9 +50,16 @@
         h1 {
             margin: 0;
             padding-left: 10px;
+            font-size: 50px;
+        }
+        
+        h2 {
             font-size: 40px;
         }
 
+        h3 {
+            font-size: 30px;
+        }
 
         .intro {
             display: flex;
@@ -79,13 +90,18 @@
         #Jaipur,#Varanasi,#Manali,#Kerala {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
+            align-items: flex-start;
+            gap: 30px;
         }
 
-        #Jaipur img,#Varanasi img,#Manali img,#Kerala img {
-            width: 100%;
-            max-width: 550px;
+        #Jaipur img,
+        #Manali img,
+        #Kerala img,
+        #Varanasi img {
+            display: flex;
+            justify-content: flex-end;
+            width: 600px;
+            height: auto;
             border-radius: 20px;
         }
 
@@ -95,7 +111,8 @@
             border-collapse: collapse;
         }
 
-        th,td {
+        th,
+        td {
             border: 2px solid #282828;
             padding: 8px;
             text-align: center;
@@ -110,7 +127,8 @@
             transform: translateY(-5px);
         }
 
-        input, select {
+        input,
+        select {
             width: 100%;
             padding: 10px;
             border-radius: 5px;
@@ -118,10 +136,6 @@
             margin-top: 5px;
         }
 
-          span {
-            opacity: .2;
-            font-size: 2rem;
-        }
 
         #head {
             color: pink;
@@ -156,7 +170,10 @@
                 padding: 20px;
             }
 
-            #Jaipur,#Varanasi,#Manali,#Kerala {
+            #Jaipur,
+            #Varanasi,
+            #Manali,
+            #Kerala {
                 flex-direction: column;
                 text-align: center;
             }
@@ -205,7 +222,11 @@
                 text-align: center;
             }
 
-            #Jaipur,#Varanasi,#Manali,#Kerala {
+            #Jaipur,
+            #Varanasi,
+            #Manali,
+            #Kerala {
+                display: flex;
                 flex-direction: column;
                 text-align: center;
             }
@@ -214,6 +235,7 @@
             img {
                 max-width: 100%;
                 height: auto;
+                
             }
 
            
@@ -282,27 +304,23 @@
 <body>
     <div id="header">
         <div class="nav-bar">
-            <div class="nav-left">
-                <img src="logo2.png" alt="logo img" width="200" height="130" style="margin-top:30px">
-                <h1>TravelLite</h1>
-            </div>
-            <div>
-                <a href="#about"><i class="fas fa-info-circle"></i> About Us</a>
-                <a href="#services"><i class="fas fa-concierge-bell"></i> Services</a>
-                <a href="#packages"><i class="fas fa-box-open"></i> Packages</a>
-                <a href="#bookings"><i class="fas fa-calendar-check"></i> Booking</a>
-                <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
-            </div>
+            <img src="images/logo2.png" alt="logo img" >
+            <h1>TravelLite</h1>
+            <a href="#about"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="#services"><i class="fas fa-concierge-bell"></i> Services</a>
+            <a href="#packages"><i class="fas fa-box-open"></i> Packages</a>
+            <a href="#bookings"><i class="fas fa-calendar-check"></i> Booking</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
 
         </div><br><br>
 
     </div>
 
     <div class="intro">
-        <h1>Make you Trip <span id="head">A Unforgettable Memory</span> <br>
-            <span>With Our Travel Planner in Hand</span>
-        </h1>
-        <img src="taj-mahal.jpg" alt="taj-mahal">
+        <h2>Make you Trip A Unforgettable Memory<br>
+            <span style="font-size: 30px;">With Our Travel Planner in Hand</span>
+        </h2>
+        <img src="images/taj-mahal.jpg" alt="taj-mahal">
     </div><br><br>
     <hr>
     <div class="box" id="about">
@@ -391,7 +409,7 @@
                     </tfoot>
                 </table>
             </div>
-            <img src="jaipur.webp" alt="jaipur pic">
+            <img src="images/jaipur.webp" alt="jaipur pic">
         </div>
         <div class="box" id="Varanasi">
             <div class="Varanasi-text">
@@ -459,7 +477,7 @@
                     </tfoot>
                 </table>
             </div>
-            <img src="varanasi.jpg" alt="Varanasi">
+            <img src="images/varanasi.jpg" alt="Varanasi">
         </div>
 
         <div class="box" id="Manali">
@@ -529,7 +547,7 @@
                     </tfoot>
                 </table>
             </div>
-            <img src="manali.webp" alt="manali pic">
+            <img src="images/manali.webp" alt="manali pic">
         </div>
 
         <div class="box" id="Kerala">
@@ -618,7 +636,7 @@
                     </tfoot>
                 </table>
             </div>
-            <img src="kerala.jpg" alt="Kerala Pic">
+            <img src="images/kerala.jpg" alt="Kerala Pic">
         </div>
 
     </div>
@@ -628,6 +646,7 @@
 
             <form id="bookingForm">
 
+                <!-- 1. Personal Information -->
                 <label>Full Name</label>
                 <input type="text" id="name">
 
@@ -637,6 +656,7 @@
                 <label>Phone Number</label>
                 <input type="tel" id="phone">
 
+                <!-- 2. Travel Details -->
                 <label>Select Destination</label>
                 <select id="destination">
                     <option value="">-- Select Place --</option>
@@ -657,6 +677,7 @@
                     </div>
                 </div>
 
+                <!-- 3. Number of Travellers -->
                 <div style="display: flex; gap:30px">
                     <div>
                         <label>Adults</label>
@@ -668,6 +689,7 @@
                     </div>
                 </div>
 
+                <!-- 4. Accommodation Preferences -->
                 <label>Hotel Category</label>
                 <select id="hotel">
                     <option value="">-- Select --</option>
@@ -686,6 +708,7 @@
                     <option>Suite</option>
                 </select>
 
+                <!-- 5. Transportation -->
                 <label>Transportation Type</label>
                 <select id="transport">
                     <option value="">-- Select --</option>
@@ -696,6 +719,7 @@
                     <option>Self-Drive</option>
                 </select>
 
+                <!-- 6. Food Preferences -->
                 <label>Food Preference</label>
                 <select id="food">
                     <option value="">-- Select --</option>
