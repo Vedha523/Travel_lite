@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <style>
+    
+    body {
+      font-family: "Poppins", sans-serif;
+      background: lavenderblush;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    form {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #553a5f;
+      margin-bottom: 25px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="tel"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #5a9bd4;
+      outline: none;
+    }
+
+    
+    input[type="submit"],
+    input[type="reset"] {
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"] {
+      background-color:#553a5f;
+      color: #ffff;
+    }
+
+    input[type="submit"]:hover {
+      background-color:#6a4f74;
+    }
+
+    input[type="reset"] {
+      background-color: #553a5f;
+      color:#ffff;
+    }
+
+    input[type="reset"]:hover {
+      background-color: #6a4f74;
+    }
+
+    label{
+      font-weight: bold;
+      color: #553a5f;
+    }
+
+    @media (max-width: 400px) {
+      form {
+        width: 90%;
+        padding: 20px;
+      }
+    }
+  </style>
+  <script>
+    function validateForm() {
+
+    let name = document.getElementById("name").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+    if (!name.match(/^[A-Za-z ]+$/)) {
+      alert("Name should contain only letters.");
+      return false;
+    }
+
+    if (!phone.match(/^[0-9]{10,15}$/)) {
+      alert("Phone number must contain only numbers and be 10 to 15 digits.");
+      return false;
+    }
+
+
+    if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    if (!password.match(/[A-Z]/) || !password.match(/[a-z]/) || !password.match(/[0-9]/) || password.length < 6) {
+      alert("Password must contain uppercase, lowercase, number and be at least 6 characters long.");
+      return false;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return false;
+    }
+
+    alert("Registration Successful!");
+    return true;
+  }
+  </script>
+
+</head>
+
+<body>
+  <form action="" method="post">
+    <h1>Sign Up</h1>
+
+    <label>Name:</label>
+    <input type="text" placeholder="Enter Your Name" maxlength="20" required>
+
+    <label>Address:</label>
+    <input type="text" placeholder="Enter Your Address" maxlength="50" required>
+
+    <label>Date of Birth:</label>
+    <input type="date" required>
+
+    <label>Phone Number:</label>
+    <input type="tel" placeholder="Enter Your Number" maxlength="15" required>
+
+    <label>Email:</label>
+    <input type="email" placeholder="Enter Your Email" maxlength="50" required>
+
+    <label>Password:</label>
+    <input type="password" placeholder="Enter Password" maxlength="10" required>
+
+    <label>Confirm Password:</label>
+    <input type="password" placeholder="Re-enter Password" maxlength="10" required>
+
+    <div style="display:flex; justify-content:space-between;">
+      <input type="submit" value="Sign Up">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+</body>
+</html>
