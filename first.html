@@ -1,291 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelLite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="images/logo.png">
     <style>
-        body{
-            background-color:lavenderblush;
-        }
-        .nav-bar{
-            display: flex;
-            align-items: center; 
-            justify-content: space-evenly;
-            height: 5rem;
-            width: 100%;
-        }
-        #header{
-            background-color: pink;
-        }
-        h1{
-            color:black;
-            font-size: 50px;
-            margin-top: 50px;
-            padding: 30px 10px;
-        }
-        .nav-bar a{
-            color:black;
-            margin-top: 30px;
-            text-decoration: none;
-            font-size: 24px;
-            padding: 30px;
+        * {
+            box-sizing: border-box;
         }
 
-        .intro{
+        body {
+            background-color: lavenderblush;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-bar a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px;
+            transition: .9s;
+        }
+
+
+        #header {
+            background-color: pink;
+        }
+
+        h1 {
+            margin: 0;
+            padding-left: 10px;
+            font-size: 40px;
+        }
+
+
+        .intro {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 40px;
+            flex-wrap: wrap;
         }
-        .intro img{
-            width: 600px;
-            height: 400px;
+
+        .intro img {
+            width: 100%;
+            max-width: 600px;
             border-radius: 30px;
-    
-            margin-left: 30px;
-            float: none;
         }
-        h2{
-            font-size: 40px;
-        }
-        h3{
-            font-size: 30px;
-        }
-        p,ul{
-            font-size: 25px;
-            font-family: 'Times New Roman', Times, serif;
-        }
-        .box{
+
+
+        .box {
             width: 90%;
             background: white;
             margin: 40px auto;
-            padding: 30px;
+            padding: 25px;
             border-radius: 18px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            transition: 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: 1s;
         }
 
-        .box:hover{
-            transform: scale(1);
-        }
 
-        #services ul, #Jaipur ul{
-            margin-left: 30px;
-        }
         #Jaipur,#Varanasi,#Manali,#Kerala {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            gap: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        #Jaipur img, #Manali img, #Kerala img, #Varanasi img{
-            display: flex;
-            justify-content: flex-end;
-            width: 600px;
-            height: auto;
+        #Jaipur img,#Varanasi img,#Manali img,#Kerala img {
+            width: 100%;
+            max-width: 550px;
             border-radius: 20px;
         }
 
-        #h3, #p, #ul {
-            margin: 0;
-            padding-bottom: 10px;
-        }
 
-        #ul {
-            margin-left: 20px;
-        }
-
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    @media (max-width: 1024px) and (min-width: 768px) {
-        body {
-            font-size: 17px;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-        }
-        .nav-bar {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-        img {
-            width: 80%;
-        }
-    }
-
-    @media (max-width: 480px) {
-        body {
-            font-size: 14px;
-            padding: 0;
-            margin: 0;
-        }
-
-        .container {
-            width: 95%;
-            margin: auto;
-        }
-
-        .nav-bar {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            gap: 8px;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        h1, h2, h3, p {
-            text-align: center;
-        }
-    }
         table {
-          border-collapse: collapse;
-          width: 100;
-          margin: 15px auto;
+            width: 100%;
+            border-collapse: collapse;
         }
-        
-        table, th, td { 
-            border: 2px solid #282828; 
+
+        th,td {
+            border: 2px solid #282828;
+            padding: 8px;
+            text-align: center;
         }
+
         th {
-          background:  #553a5f;
-          color: white;
-          padding: 8px;
+            background: #553a5f;
+            color: white;
         }
-        td {
-          padding: 8px;
-          text-align: center;
+
+        .box:hover {
+            transform: translateY(-5px);
         }
+
         input, select {
             width: 100%;
             padding: 10px;
-            margin-top: 5px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            margin-top: 5px;
         }
-         button {
-            margin-top: 20px;
+
+          span {
+            opacity: .2;
+            font-size: 2rem;
+        }
+
+        #head {
+            color: pink;
+            opacity: 1;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+ 
+
+        button {
             width: 100%;
-            background-color: #6a4f74;
-            color: white;
             padding: 12px;
-            font-size: 16px;
+            background: #6a4f74;
+            color: white;
             border: none;
             border-radius: 6px;
-            cursor: pointer;
         }
 
-        button:hover {
-            background-color: #553a5f;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-top: 15px;
-            
-        }
-        footer{
+
+        footer {
             text-align: center;
             padding: 10px;
-            background:pink;
-            color: black;
-            width: 100%;
-            height: auto;
+            background: pink;
         }
 
-        @media (max-width:468px) {
-            iframe{
-                width: 50px;
-            }
-            img{
-                display: inline-block;
-            }
-            .box{
+
+
+
+        @media (max-width: 500px) {
+            .intro {
+                text-align: center;
                 padding: 20px;
             }
+
+            #Jaipur,#Varanasi,#Manali,#Kerala {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 22px;
+            }
+
+            p,ul {
+                font-size: 18px;
+            }
         }
+
+
+        @media (max-width: 450px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .nav-bar a {
+                font-size: 0.9rem;
+                padding: 5px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+        }
+
+      
+        @media (max-width: 768px) {
+
+            
+            .nav-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .intro {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #Jaipur,#Varanasi,#Manali,#Kerala {
+                flex-direction: column;
+                text-align: center;
+            }
+
+           
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+           
+            table {
+                font-size: 14px;
+            }
+
+            th,td {
+                padding: 6px;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+
     </style>
     <script>
-    function validateForm(){
-        let name = document.getElementById("name").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let phone = document.getElementById("phone").value.trim();
-        let destination = document.getElementById("destination").value.trim();
-        let start = document.getElementById("startDate").value;
-        let end = document.getElementById("endDate").value;
-        let adults = document.getElementById("adults").value;
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let destination = document.getElementById("destination").value.trim();
+            let start = document.getElementById("startDate").value;
+            let end = document.getElementById("endDate").value;
+            let adults = document.getElementById("adults").value;
 
 
-        if (name === "" || email === "" || phone === "" || destination === "" || start === "" || end === "" || adults === "") {
-            alert("Please fill all required fields!");
-            return false;
+            if (name === "" || email === "" || phone === "" || destination === "" || start === "" || end === "" || adults === "") {
+                alert("Please fill all required fields!");
+                return false;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Enter a valid email address!");
+                return false;
+            }
+
+            if (phone.length < 10) {
+                alert("Enter 10 digits phone number!");
+                return false;
+            }
+            const selected = new Date(value);
+            const today = new Date();
+
+            selected.setHours(0, 0, 0, 0);
+            today.setHours(0, 0, 0, 0);
+
+            if (selected < today) {
+                alert("You cannot select a past date!");
+
+            }
+            if (new Date(end) < new Date(start)) {
+                alert("End date cannot be earlier than start date!");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
         }
-
-        if (!email.includes("@") || !email.includes(".")) {
-            alert("Enter a valid email address!");
-            return false;
-        }
-
-        if (phone.length < 10) {
-            alert("Enter 10 digits phone number!");
-            return false;
-        }
-        const selected = new Date(value);
-        const today = new Date();
-
-        selected.setHours(0,0,0,0);
-        today.setHours(0,0,0,0);
-
-        if (selected < today) {
-            alert("You cannot select a past date!");
-    
-        }
-        if (new Date(end) < new Date(start)) {
-            alert("End date cannot be earlier than start date!");
-            return false;
-        }
-
-        alert("Form submitted successfully!");
-    }
     </script>
 </head>
+
 <body>
     <div id="header">
-        <div class="nav-bar"> 
-            <img src="images/logo2.png" alt="logo img" width="200" height="130" style="margin-top:30px">
-            <h1>TravelLite</h1>
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#packages">Packages</a>
-            <a href="#bookings">Booking</a>
-            <a href="#contact">Contact Us</a>
-            <a href="login.html"><img src="images/login.png" alt="login image" width="8%" height="8%">Log In</a>
-            <a href="signup.html">Sign Up</a>
-        </div><br><br><hr>
+        <div class="nav-bar">
+            <div class="nav-left">
+                <img src="logo2.png" alt="logo img" width="200" height="130" style="margin-top:30px">
+                <h1>TravelLite</h1>
+            </div>
+            <div>
+                <a href="#about"><i class="fas fa-info-circle"></i> About Us</a>
+                <a href="#services"><i class="fas fa-concierge-bell"></i> Services</a>
+                <a href="#packages"><i class="fas fa-box-open"></i> Packages</a>
+                <a href="#bookings"><i class="fas fa-calendar-check"></i> Booking</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+            </div>
+
+        </div><br><br>
+
     </div>
 
     <div class="intro">
-        <h2>Make you Trip A Unforgettable Memory<br>
-        <span style="font-size: 30px;">With Our Travel Planner in Hand<span></h2>
-        <img src="images/taj-mahal.jpg" alt="taj-mahal">
+        <h1>Make you Trip <span id="head">A Unforgettable Memory</span> <br>
+            <span>With Our Travel Planner in Hand</span>
+        </h1>
+        <img src="taj-mahal.jpg" alt="taj-mahal">
     </div><br><br>
     <hr>
     <div class="box" id="about">
         <h2>About Us</h2>
         <p>
-            Welcome to your personal Travel Itinerary Planner—your companion for smooth and memorable trips. Add destinations, schedule dates and times, and jot down important notes all in one place. Stay organized, save time, and travel with confidence so you can enjoy every moment of your journey.
+            Welcome to your personal Travel Itinerary Planner—your companion for smooth and memorable trips. Add
+            destinations, schedule dates and times, and jot down important notes all in one place. Stay organized, save
+            time, and travel with confidence so you can enjoy every moment of your journey.
         </p>
     </div>
     <div class="box" id="services">
@@ -325,21 +350,48 @@
                 </ul>
                 <table border="1">
                     <thead>
-                        <tr><th>Category</th><th>Estimated Cost (₹)</th><th>Notes</th></tr>
+                        <tr>
+                            <th>Category</th>
+                            <th>Estimated Cost (₹)</th>
+                            <th>Notes</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Transportation</td><td>3,000</td><td>Train/bus + local cabs/auto</td></tr>
-                        <tr><td>Accommodation</td><td>3,500</td><td>2 nights in 3-star hotel</td></tr>
-                        <tr><td>Food</td><td>1,500</td><td>Rajasthani thali, cafes</td></tr>
-                        <tr><td>Local Guide &amp; Tourism</td><td>1,000</td><td>Amber Fort, City Palace, entry fees</td></tr>
-                        <tr><td>Room Booking / Misc.</td><td>500</td><td>Advance booking or souvenirs</td></tr>
+                        <tr>
+                            <td>Transportation</td>
+                            <td>3,000</td>
+                            <td>Train/bus + local cabs/auto</td>
+                        </tr>
+                        <tr>
+                            <td>Accommodation</td>
+                            <td>3,500</td>
+                            <td>2 nights in 3-star hotel</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td>1,500</td>
+                            <td>Rajasthani thali, cafes</td>
+                        </tr>
+                        <tr>
+                            <td>Local Guide &amp; Tourism</td>
+                            <td>1,000</td>
+                            <td>Amber Fort, City Palace, entry fees</td>
+                        </tr>
+                        <tr>
+                            <td>Room Booking / Misc.</td>
+                            <td>500</td>
+                            <td>Advance booking or souvenirs</td>
+                        </tr>
                     </tbody>
                     <tfoot style="background-color:  #553a5f; color: white;">
-                        <tr><td>Total</td><td colspan="2">9,500</td></tr>
+                        <tr>
+                            <td>Total</td>
+                            <td colspan="2">9,500</td>
+                        </tr>
                     </tfoot>
                 </table>
             </div>
-            <img src="images/jaipur.webp" alt="jaipur pic">
+            <img src="jaipur.webp" alt="jaipur pic">
         </div>
         <div class="box" id="Varanasi">
             <div class="Varanasi-text">
@@ -349,9 +401,9 @@
                 <p><b>Day 1:</b></p>
                 <ul>
                     <li>Early morning boat ride on Ganga during sunrise</li>
-                    <li>Walk along Assi Ghat to Dashashwamedh Ghat</li> 
+                    <li>Walk along Assi Ghat to Dashashwamedh Ghat</li>
                     <li>visit kashi vishwanth temple </li>
-                    
+
                 </ul>
                 <p><b>Day 2:</b></p>
                 <ul>
@@ -366,21 +418,48 @@
 
                 <table border="1">
                     <thead>
-                        <tr><th>Category</th><th>Estimated Cost (₹)</th><th>Notes</th></tr>
+                        <tr>
+                            <th>Category</th>
+                            <th>Estimated Cost (₹)</th>
+                            <th>Notes</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Transportation</td><td>3,000</td><td>Train/flight + local autos</td></tr>
-                        <tr><td>Accommodation</td><td>2,500</td><td>Ganges-view guesthouse (2 nights)</td></tr>
-                        <tr><td>Food</td><td>1,200</td><td>Local eateries, street food</td></tr>
-                        <tr><td>Local Guide &amp; Tourism</td><td>1,000</td><td>Boat ride, temples, heritage walk</td></tr>
-                        <tr><td>Room Booking / Misc.</td><td>500</td><td>Tips, small purchases</td></tr>
+                        <tr>
+                            <td>Transportation</td>
+                            <td>3,000</td>
+                            <td>Train/flight + local autos</td>
+                        </tr>
+                        <tr>
+                            <td>Accommodation</td>
+                            <td>2,500</td>
+                            <td>Ganges-view guesthouse (2 nights)</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td>1,200</td>
+                            <td>Local eateries, street food</td>
+                        </tr>
+                        <tr>
+                            <td>Local Guide &amp; Tourism</td>
+                            <td>1,000</td>
+                            <td>Boat ride, temples, heritage walk</td>
+                        </tr>
+                        <tr>
+                            <td>Room Booking / Misc.</td>
+                            <td>500</td>
+                            <td>Tips, small purchases</td>
+                        </tr>
                     </tbody>
                     <tfoot style="background-color:  #553a5f; color: white;">
-                        <tr><td>Total</td><td colspan="2">8,200</td></tr>
+                        <tr>
+                            <td>Total</td>
+                            <td colspan="2">8,200</td>
+                        </tr>
                     </tfoot>
                 </table>
             </div>
-            <img src="images/varanasi.jpg" alt="Varanasi">
+            <img src="varanasi.jpg" alt="Varanasi">
         </div>
 
         <div class="box" id="Manali">
@@ -404,26 +483,53 @@
                 </ul>
                 <p><b>Day 4:</b></p>
                 <ul>
-                    <li>Trip to Rohtang pass (permit requried , seasonal)</li> 
+                    <li>Trip to Rohtang pass (permit requried , seasonal)</li>
                 </ul>
 
                 <table border="1">
                     <thead>
-                        <tr><th>Category</th><th>Estimated Cost (₹)</th><th>Notes</th></tr>
+                        <tr>
+                            <th>Category</th>
+                            <th>Estimated Cost (₹)</th>
+                            <th>Notes</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Transportation</td><td>5,500</td><td>Volvo bus or shared cab from Delhi/Chandigarh</td></tr>
-                        <tr><td>Accommodation</td><td>5,000</td><td>3 nights in a mountain-view stay</td></tr>
-                        <tr><td>Food</td><td>2,500</td><td>Local dhabas &amp; cafés</td></tr>
-                        <tr><td>Local Guide &amp; Tourism</td><td>2,000</td><td>Solang Valley, Rohtang Pass permits</td></tr>
-                        <tr><td>Room Booking / Misc.</td><td>1,000</td><td>Advance, heater charges, etc.</td></tr>
+                        <tr>
+                            <td>Transportation</td>
+                            <td>5,500</td>
+                            <td>Volvo bus or shared cab from Delhi/Chandigarh</td>
+                        </tr>
+                        <tr>
+                            <td>Accommodation</td>
+                            <td>5,000</td>
+                            <td>3 nights in a mountain-view stay</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td>2,500</td>
+                            <td>Local dhabas &amp; cafés</td>
+                        </tr>
+                        <tr>
+                            <td>Local Guide &amp; Tourism</td>
+                            <td>2,000</td>
+                            <td>Solang Valley, Rohtang Pass permits</td>
+                        </tr>
+                        <tr>
+                            <td>Room Booking / Misc.</td>
+                            <td>1,000</td>
+                            <td>Advance, heater charges, etc.</td>
+                        </tr>
                     </tbody>
                     <tfoot style="background-color:  #553a5f; color: white;">
-                        <tr><td>Total</td><td colspan="2">16,000</td></tr>
+                        <tr>
+                            <td>Total</td>
+                            <td colspan="2">16,000</td>
+                        </tr>
                     </tfoot>
                 </table>
             </div>
-            <img src="images/manali.webp" alt="manali pic">
+            <img src="manali.webp" alt="manali pic">
         </div>
 
         <div class="box" id="Kerala">
@@ -453,49 +559,75 @@
                     <li>Evening Kalaripayattu / Kathakali show </li>
                 </ul>
                 <p><b> Day 4: Thekkady → Alleppey</b></p>
-                <ul> 
+                <ul>
                     <li>Travel to Alleppey </li>
                     <li>Check in Houseboat </li>
                     <li> Enjoy backwater cruise, meals on board, peaceful stay</li>
                 </ul>
                 <p><b>Day 5: Alleppey → Kochi </b></p>
-                <ul> 
+                <ul>
                     <li>Travel back to Kochi </li>
                     <li> Explore Fort Kochi, marine drive, cafes</li>
                     <li>Shopping for spices and handicrafts</li>
                 </ul>
                 <p><b>Day 6 (Optional): Kochi City Tour or Return </b></p>
-                <ul> 
+                <ul>
                     <li> Lulu Mall / Jew Street / Museums</li>
                     <li>Return journey </li>
                 </ul>
                 <table border="1">
                     <thead>
-                        <tr><th>Category</th><th>Estimated Cost (₹)</th><th>Notes</th></tr>
+                        <tr>
+                            <th>Category</th>
+                            <th>Estimated Cost (₹)</th>
+                            <th>Notes</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Transportation</td><td>6,500</td><td>Flights/train + local cab/bus</td></tr>
-                        <tr><td>Accommodation</td><td>8,000</td><td>5 nights in resort + 1 night houseboat</td></tr>
-                        <tr><td>Food</td><td>3,000</td><td>South Indian &amp; seafood dishes</td></tr>
-                        <tr><td>Local Guide &amp; Tourism</td><td>3,000</td><td>Tea estate tour, backwaters, entry fees</td></tr>
-                        <tr><td>Room Booking / Misc.</td><td>1,500</td><td>Advance bookings, tips</td></tr>
+                        <tr>
+                            <td>Transportation</td>
+                            <td>6,500</td>
+                            <td>Flights/train + local cab/bus</td>
+                        </tr>
+                        <tr>
+                            <td>Accommodation</td>
+                            <td>8,000</td>
+                            <td>5 nights in resort + 1 night houseboat</td>
+                        </tr>
+                        <tr>
+                            <td>Food</td>
+                            <td>3,000</td>
+                            <td>South Indian &amp; seafood dishes</td>
+                        </tr>
+                        <tr>
+                            <td>Local Guide &amp; Tourism</td>
+                            <td>3,000</td>
+                            <td>Tea estate tour, backwaters, entry fees</td>
+                        </tr>
+                        <tr>
+                            <td>Room Booking / Misc.</td>
+                            <td>1,500</td>
+                            <td>Advance bookings, tips</td>
+                        </tr>
                     </tbody>
                     <tfoot style="background-color:  #553a5f; color: white;">
-                        <tr><td>Total</td><td colspan="2">22,000</td></tr>
+                        <tr>
+                            <td>Total</td>
+                            <td colspan="2">22,000</td>
+                        </tr>
                     </tfoot>
                 </table>
             </div>
-            <img src="images/kerala.jpg" alt="Kerala Pic">
+            <img src="kerala.jpg" alt="Kerala Pic">
         </div>
 
-    </div> 
+    </div>
     <div class="box">
         <div id="bookings">
             <h2>Travel Itinerary Booking Form</h2>
 
             <form id="bookingForm">
 
-                <!-- 1. Personal Information -->
                 <label>Full Name</label>
                 <input type="text" id="name">
 
@@ -505,7 +637,6 @@
                 <label>Phone Number</label>
                 <input type="tel" id="phone">
 
-                <!-- 2. Travel Details -->
                 <label>Select Destination</label>
                 <select id="destination">
                     <option value="">-- Select Place --</option>
@@ -526,7 +657,6 @@
                     </div>
                 </div>
 
-                <!-- 3. Number of Travellers -->
                 <div style="display: flex; gap:30px">
                     <div>
                         <label>Adults</label>
@@ -538,7 +668,6 @@
                     </div>
                 </div>
 
-                <!-- 4. Accommodation Preferences -->
                 <label>Hotel Category</label>
                 <select id="hotel">
                     <option value="">-- Select --</option>
@@ -557,7 +686,6 @@
                     <option>Suite</option>
                 </select>
 
-                <!-- 5. Transportation -->
                 <label>Transportation Type</label>
                 <select id="transport">
                     <option value="">-- Select --</option>
@@ -568,7 +696,6 @@
                     <option>Self-Drive</option>
                 </select>
 
-                <!-- 6. Food Preferences -->
                 <label>Food Preference</label>
                 <select id="food">
                     <option value="">-- Select --</option>
@@ -578,20 +705,27 @@
 
                 <button type="button" onclick="validateForm()">Submit</button>
 
-                </form>
-            </div>
+            </form>
         </div>
-        <div class="box">
-            <div id="contact">
-                <p>Contact Us</p>
-                
-                Mail: <a href="mailto:travellite@gmail.com">travellite@gmail.com</a><br>
-                Call: <a href="tel:7598354266">+91 7598354266</a><br>
-                Come to: <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4032232.0932659213!2d72.24772870786573!3d9.268700519678152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba866bd6aaaaaab%3A0xc650b8a75e7b51f0!2sKarunya%20Institute%20of%20Technology%20and%20Sciences%20(Deemed%20University)!5e0!3m2!1sen!2sin!4v1763308002164!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+    </div>
+    <div class="box">
+        <div id="contact">
+            <p>Contact Us</p>
+
+            Mail: <a href="mailto:travellite@gmail.com">travellite@gmail.com</a><br>
+            Call: <a href="tel:7598354266">+91 7598354266</a><br>
+            Come to: <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4032232.0932659213!2d72.24772870786573!3d9.268700519678152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba866bd6aaaaaab%3A0xc650b8a75e7b51f0!2sKarunya%20Institute%20of%20Technology%20and%20Sciences%20(Deemed%20University)!5e0!3m2!1sen!2sin!4v1763308002164!5m2!1sen!2sin"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-          <footer>
-            © 2025 TravelLite
-        </footer>
+    </div>
+    <footer>
+        © 2025 TravelLite
+    </footer>
+
+    </script>
 </body>
+
 </html>
